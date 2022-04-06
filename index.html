@@ -5,6 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('iMFHtbtT-GUb9TxOF');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>  
+    <!-- <script src="./index.js"></script> -->
     <title> LUGA INDUMENTARIA </title>
 </head>
 <body>
@@ -13,10 +37,36 @@
     <h3> En Construcción</h3>
 
 
+
+    <h2>Envio de Datos</h2>
+    <div>
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label>Name</label>
+            <input type="text" name="from_name">
+            <label>Email</label>
+            <input type="email" name="user_email">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <br>
     <h2>Localización</h2>
     <div id="mapContainer">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13940.79033223368!2d-59.2564406!3d-29.1293621!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8e1d4ac46a86f793!2sLuga%20Shop%20Indumentaria!5e0!3m2!1ses-419!2sar!4v1649211533199!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
+
 
 </body>
 </html>
