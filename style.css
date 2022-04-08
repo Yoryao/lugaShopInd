@@ -31,3 +31,7 @@ iframe {
     height: 300px;
 }
 
+img {
+    width: 100px;
+    height: auto;
+}
