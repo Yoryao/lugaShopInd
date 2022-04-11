@@ -2,9 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   solicitarData();
 });
 
-const solicitarData = async () => {
+const solicitarData = async (categoria) => {
+  let url = "https://fakestoreapi.com/products/category/" + categoria;
+
+  if (categoria == undefined) {
+    url = "https://fakestoreapi.com/products";
+  }
+
   try {
-    const res = await fetch("https://fakestoreapi.com/products");
+    const res = await fetch(url);
     const data = await res.json();
     ponerCards(data);
   } catch (error) {
@@ -13,26 +19,30 @@ const solicitarData = async () => {
   }
 };
 
+function verDetalle(id) {
+  console.log("funciona el detalle." + id);
+}
+
 const ponerCards = (data) => {
-  console.log(data);
+  const clearTemplate = document.getElementById("card-dinamicas");
+  clearTemplate.innerHTML = `<section class="row" id="card-dinamicas"></section>`;
 
   const cards = document.getElementById("card-dinamicas");
   const template = document.getElementById("templateCard").content;
   const fragment = document.createDocumentFragment();
 
   data.forEach((item) => {
-    //   console.log(item)
-    //   console.log(item.title);
-      const clone = template.cloneNode(true);
-      clone.getElementById("card-title").textContent = item.title;
-      clone.getElementById("card-text").textContent = item.description;
-      clone.getElementById("card-img").setAttribute ("src",  item.image)
+    const clone = template.cloneNode(true);
 
-      console.log(item)
-      console.log(item.title)
-
+    clone.getElementById("card-title").textContent = item.title;
+    clone.getElementById("card-text").textContent = item.description;
+    clone.getElementById("card-img").setAttribute("src", item.image);
+    clone.getElementById("detailButton").addEventListener("click", function () {
+      verDetalle(item.id);
+    });
     fragment.appendChild(clone);
   });
+
   cards.appendChild(fragment);
 };
 
@@ -47,6 +57,3 @@ const loader = (state) => {
     spinner.classList.remove("d-none");
   }
 };
-
-
-//VI HASTA 1.37 HRS

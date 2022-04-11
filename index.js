@@ -22,18 +22,3 @@ window.onload = function () {
     });
 };
 
-let pintarProductos = async () => {
- let listado = await  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    //.then((json) => console.log(json));
-
-  let primero = listado[0]
-  document.getElementById("primerProducto").innerText = primero.title;
-  document.getElementById("myImage").src = "https://i.pravatar.cc";
-
-
-
-  
-}
-
-window.onload = pintarProductos();
