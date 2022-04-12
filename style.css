@@ -1,5 +1,4 @@
 * {
-    background-color: pink;
 }
 
 h1 {
@@ -31,3 +30,7 @@ iframe {
     height: 300px;
 }
 
+img {
+    width: 100px;
+    height: auto;
+}
