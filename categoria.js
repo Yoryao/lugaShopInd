@@ -18,9 +18,48 @@ const loadCategorias = async () => {
   }
 };
 
-function irCategoria(id) {
+function mostrarProductos(id) {
   console.log("Se ha clickeado categoria " + id);
+  document.location = "productos.html";
+  loadProductos();
 }
+
+const loadProductos =  () => {
+
+  console.log("hola")
+
+  // const cardCategoria = document.getElementById("categoriasContainer");
+  // const template = document.getElementById("template").content;
+  // const fragment = document.createDocumentFragment();
+
+  // data.forEach((item) => {
+  //   const clone = template.cloneNode(true);
+
+  //   clone.getElementById("categoryButton").style.backgroundImage = `url('${item.img}')`;
+  //   clone.getElementById("categoryP").textContent = item.nombre;
+  //   clone
+  //     .getElementById("categoryButton")
+  //     .addEventListener("click", function () {
+  //       mostrarProductos(item.nombre, item.id);
+  //     });
+
+  //   fragment.appendChild(clone);
+  // });
+  // cardCategoria.appendChild(fragment);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const loadData = async (data) => {
   const cardCategoria = document.getElementById("categoriasContainer");
@@ -30,16 +69,12 @@ const loadData = async (data) => {
   data.forEach((item) => {
     const clone = template.cloneNode(true);
 
-    clone.getElementById("categoryImage").setAttribute("src", item.img);
-    clone
-      .getElementById("categoryImage")
-      .setAttribute("alt", `Photo of ${item.nombre}`);
+    clone.getElementById("categoryButton").style.backgroundImage = `url('${item.img}')`;
     clone.getElementById("categoryP").textContent = item.nombre;
-
     clone
       .getElementById("categoryButton")
       .addEventListener("click", function () {
-        irCategoria(item.id);
+        mostrarProductos(item.nombre, item.id);
       });
 
     fragment.appendChild(clone);

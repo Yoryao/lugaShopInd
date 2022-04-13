@@ -1,0 +1,33 @@
+* {
+    background-color: rgb(238, 175, 233);
+}
+
+
+#categoriasContainer {
+    border-radius: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section {
+ height: 150px;
+ width: 25%;
+ 
+ padding-left: 10px;
+ padding-right: 10px;
+ text-align: center;
+ 
+}
+
+.section__image__button {
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 100px;
+     height: 100px; 
+     background-position:center;
+     background-size: 100px 100px;
+
+    border-radius: 15px;
+    object-fit:fill;
+}

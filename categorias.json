@@ -1,10 +1,10 @@
 [
-  { "id": 1, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 2, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 3, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 4, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 5, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 6, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 7, "nombre": "Categoria", "img": "https://i.pravatar.cc" },
-  { "id": 8, "nombre": "Categoria", "img": "https://i.pravatar.cc" }
+  { "id": 1, "nombre": "fragrances", "img": "https://dummyjson.com/image/i/products/11/1.jpg" },
+  { "id": 2, "nombre": "skincare", "img": "https://dummyjson.com/image/i/products/16/1.png" },
+  { "id": 3, "nombre": "tops", "img": "https://dummyjson.com/image/i/products/36/1.jpg" },
+  { "id": 4, "nombre": "womens-dresses", "img": "https://dummyjson.com/image/i/products/41/1.jpg" },
+  { "id": 5, "nombre": "womens-shoes", "img": "https://dummyjson.com/image/i/products/46/1.webp" },
+  { "id": 6, "nombre": "womens-watches", "img": "https://dummyjson.com/image/i/products/66/2.jpg" },
+  { "id": 7, "nombre": "womens-bags", "img": "https://dummyjson.com/image/i/products/71/2.jpg   " },
+  { "id": 8, "nombre": "womens-jewellery", "img": "https://dummyjson.com/image/i/products/77/1.jpg" }
 ]
