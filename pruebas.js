@@ -3,23 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   solicitarData();
 });
 
-//capturar productos o por categoria
-const solicitarData = async (categoria) => {
-  let url = "https://fakestoreapi.com/products/category/" + categoria;
-
-  if (categoria == undefined) {
-    url = "https://fakestoreapi.com/products";
-  }
-
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-    ponerCards(data);
-  } catch (error) {
-  } finally {
-    //loader(false);
-  }
-};
 
 //mostrar los productos.
 const ponerCards = (data) => {
