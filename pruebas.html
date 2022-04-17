@@ -22,20 +22,52 @@
         </button>
     </div>
 
-    <div>
-        <button onclick="solicitarData('jewelery')">Ropa</button>
-        <button onclick="solicitarData('electronics')">Ropa</button>
-        <button onclick="solicitarData(`women's clothing`)">Electronica</button>
-       
+    <div class="productoDetalle">
+        <img id="detalleImagen" src="" alt="">
+        <h2 id="detalleNombre"> Nombre del producto </h2>
+        <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae atque quas odit.</p>
+        <div>
+            <span class="talles"> S </span>
+            <span class="talles"> M </span>
+            <span class="talles"> L </span>
+            <span class="talles"> XL </span>
+        </div>
+        <ul>
+            <li><img src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+            <li><img src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+            <li><img src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+            <li><img src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="modalContainer" class="modalContainer">
         <div id="modal">
             <h1 id="h1Modal">titulo</h1>
             <h2 id="h2Modal">descripcion</h2A>
-            <button id="btn1">agregar</button>
-            <!-- Al boton volver no pude agregarle el eventlistener de ocultar modal -->
-            <button id="volver" onclick="ocultarDetalle()">volver</button>
+                <button id="btn1">agregar</button>
+                <!-- Al boton volver no pude agregarle el eventlistener de ocultar modal -->
+                <button id="volver" onclick="ocultarDetalle()">volver</button>
         </div>
     </section>
 

@@ -44,6 +44,7 @@ const mostrarCategorias = async (data) => {
 //4) elijo la categoria.
 function elegirCategoria(id) {
   console.log("Se ha clickeado categoria " + id);
+
   loadProductos( id );
 }
 
@@ -52,7 +53,9 @@ const loadProductos = async ( id ) => {
   try {
     const res = await fetch("productos.json");
     const data = await res.json();
-    mostrarProductos(data);
+
+    let filtrado = data.filter(item => item.category == id)
+    mostrarProductos(filtrado);
   } catch (error) {
     console.log(error);
   } finally {
@@ -65,11 +68,12 @@ const mostrarProductos = async ( data ) => {
    
   
    const cardProductos = document.getElementById("productosContainer");
+    cardProductos.innerHTML = "";
+
    const templateProducto = document.getElementById("templateProductos").content;
    const fragment = document.createDocumentFragment();
-  console.log(data)
   data.forEach((item) => {
-    console.log((item))
+    
     const clone = templateProducto.cloneNode(true);
   
     clone.getElementById("productosImage").setAttribute("src" , item.images[0]);
@@ -78,7 +82,12 @@ const mostrarProductos = async ( data ) => {
     clone.getElementById("productosInfo").textContent = item.description;
     clone.getElementById("addButton")
     .addEventListener("click", function () {
-      console.log(`se eligio el producto: ${item.id}`)})
+      console.log(`se eligio el producto: ${item.id}`)
+      console.log(item)
+      
+    
+    
+    })
       //       mostrarProductos(item.nombre, item.id);
       fragment.appendChild(clone);
    });
@@ -86,5 +95,3 @@ const mostrarProductos = async ( data ) => {
   }
 
 
-// <button id="addButton" class="section__add__button"> Agregar
-// </button>
