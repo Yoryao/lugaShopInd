@@ -57,3 +57,36 @@
     border-radius: 15px;
     object-fit:fill;
 }
+
+.modalContainer {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(26, 27, 21, 0.7);
+}
+
+.mostrar {
+    display: block;
+    opacity: 1;
+}
+
+#detalleContainer {
+    background-color: aquamarine;
+    margin: 15% auto;
+    width: 70%;
+    padding: 30px;
+}
+
+#listImagen {
+    display: flex;
+    flex-direction: row;
+}
+
+.altImagen{
+    width: 100px;
+}
