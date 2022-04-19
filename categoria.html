@@ -16,7 +16,7 @@
     <h1> Luga Shop Indumentaria</h1>
     <h3> En Construcción</h3>
     <span ><img src="https://picsum.photos/50/50?random" alt="">
-        <p id="cartItems">0</p>
+        <p id="cartItems" onclick="abrirCarrito()">0</p>
     </span>
 
 
@@ -36,6 +36,12 @@
 
     <section id="modalContainer" class="modalContainer">
         <div id="detalleContainer">
+    
+
+
+
+
+
 
         </div>
     </section>
@@ -43,7 +49,24 @@
     
     <section id="modalCarrito" class="modalCarrito">
         <div id="carritoContainer">
-            
+            <section class="carritoSection">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <td>Item</td>
+                        <td>Producto</td>
+                    </tr>
+                    </thead>
+                    <tbody id="items">
+    
+                </tbody>
+                </table>
+            </section>
+
+
+
+
+
             <button id="cerrarCarritoBtn" onClick="cerrarCarrito()">
             CERRAR CARRITO
             </button>
@@ -79,19 +102,7 @@
     </template>
 
     <template id="templateCarrito">
-        <section class="carritoSection">
-            <table class="table">
-                <thead>
-                    <tr>
-                    <td>Item</td>
-                    <td>Producto</td>
-                </tr>
-                </thead>
-                <tbody id="items">
 
-            </tbody>
-            </table>
-        </section>
     </template>
 
     <template id="templateDetalle">

@@ -2,7 +2,27 @@
 //VALIDAR NO SUMAR ITEMS YA EXISTENTES.
 //realizar toast para producto existente en el carrito
 console.log("Productos Funcionando.");
-let carrito = [];
+
+
+//0)DECLARO VARIABLES A UTILIZAR
+let carrito = [
+  {
+    "posicion": 1,
+    "nombre": "Women ",
+    "id": 58
+},
+{
+  "posicion": 2,
+  "nombre": "Heel",
+  "id": 48
+},
+{
+  "posicion": 3,
+  "nombre": "Strip",
+  "id": 47
+}
+
+];
 
 //1) llamo a las categorias.
 window.onload = function () {
@@ -141,6 +161,8 @@ function agregarCarrito(item) {
     carrito.push(productoCarrito);
     sumarItems();
     
+console.log(carrito)
+
   } else {
     console.log("El producto ya existe en el carrito.");
   }
@@ -155,13 +177,44 @@ function sumarItems() {
 }
 
 
-
+function abrirCarrito(){
 
 document.getElementById("cartItems").addEventListener("click" , () => {
   const modal = document.getElementById("modalCarrito");
   modal.classList.add("mostrarCarrito");
-  
 })
+
+let tabla = ""
+
+carrito.forEach(producto => {
+
+let fila = `<tr><td> HOLA MUNDO </td><td> ${producto.id}</td><td><button onclick="borrarIt(${producto.id})"> X </button></tr>`;
+tabla += fila;
+
+
+})
+
+
+document.getElementById("items").innerHTML = tabla
+}
+
+
+
+
+function borrarIt(item){
+  console.log("se borro el item" + item)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function cerrarCarrito() {
   const modal = document.getElementById("modalCarrito");
