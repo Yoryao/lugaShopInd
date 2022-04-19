@@ -15,12 +15,19 @@
 
     <h1> Luga Shop Indumentaria</h1>
     <h3> En Construcción</h3>
+    <span ><img src="https://picsum.photos/50/50?random" alt="">
+        <p id="cartItems">0</p>
+    </span>
 
-    
+
+
+
+
+
     <div id="categoriasContainer">
-        
+
     </div>
-    
+
     <div id="productosContainer">
 
     </div>
@@ -33,6 +40,26 @@
         </div>
     </section>
 
+    
+    <section id="modalCarrito" class="modalCarrito">
+        <div id="carritoContainer">
+            
+            <button id="cerrarCarritoBtn" onClick="cerrarCarrito()">
+            CERRAR CARRITO
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <template id="template">
         <section class="section">
             <button id="categoryButton" class="section__image__button">
@@ -43,23 +70,40 @@
 
     <template id="templateProductos">
         <section class="productosSection">
-            <img id="productosImage" class="productos__Image"src="" alt="">
+            <img id="productosImage" class="productos__Image" src="" alt="">
             <h3 id="productosTitle"></h3>
             <p id="productosInfo"></p>
             <button id="addButton" class="section__add__button"> Ver Detalle
-            </button>     
+            </button>
+        </section>
+    </template>
+
+    <template id="templateCarrito">
+        <section class="carritoSection">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <td>Item</td>
+                    <td>Producto</td>
+                </tr>
+                </thead>
+                <tbody id="items">
+
+            </tbody>
+            </table>
         </section>
     </template>
 
     <template id="templateDetalle">
         <section class="detalleSection">
-            <button id="closeModal" onclick="cerrarModal()" >Cerrar Modal
+            <button id="closeModal" onclick="cerrarModal()">Cerrar Modal
             </button>
-            <button id="addToCart" onclick="" >Agregar Producto
+            <button id="addToCart" onclick="">Agregar Producto
             </button>
             <img id="detalleImagen" src="" alt="">
             <h2 id="detalleNombre"> Nombre del producto </h2>
-            <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae atque quas odit.</p>
+            <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
+                atque quas odit.</p>
             <div>
                 <span class="talles"> S </span>
                 <span class="talles"> M </span>
