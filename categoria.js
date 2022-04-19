@@ -103,6 +103,10 @@ const verDetalle = async (item) => {
 
   const clone = templateDetalle.cloneNode(true);
 
+  clone.getElementById("addToCart").addEventListener("click" , function() {
+    agregarCarrito(item);
+  })
+
   clone.getElementById("detalleImagen").setAttribute("src", item.images[0]);
   clone.getElementById("detalleNombre").textContent = item.title;
   clone.getElementById("detalleDescripcion").textContent = item.description;
@@ -116,13 +120,45 @@ const verDetalle = async (item) => {
   cardDetalle.appendChild(fragment);
 };
 
-let modal = document.getElementById("modalContainer");
 function cerrarModal(){
+  let modal = document.getElementById("modalContainer");
   console.log("cerrando Modal")
   modal.classList.remove("mostrar");
 }
 
+let carrito = [];
+
+
+function agregarCarrito(item) {
+  console.log(item.title)
+  
+  console.log("carrito");
+  console.log(carrito);
+
+  let productoCarrito = {
+    "posicion" : (carrito.length) + 1 ,
+    "nombre" : item.title,
+    "id" : item.id,
+  }
+
+
+console.log("producto agregado");
+carrito.push(productoCarrito);
+console.log(productoCarrito)
+
+console.log("Carrito Lleno");
+console.log(carrito)
+
+
+
+
+
+
+
+}
+
 window.onclick = function(event) {
+  let modal = document.getElementById("modalContainer");
   
   if (event.target == modal) {
     modal.classList.remove("mostrar");
