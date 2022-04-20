@@ -58,7 +58,7 @@
     object-fit:fill;
 }
 
-.modalContainer {
+.modalContainer .formularioContainer {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -75,7 +75,7 @@
     opacity: 1;
 }
 
-#detalleContainer {
+#detalleContainer #formularioContainer{
     background-color: aquamarine;
     margin: 15% auto;
     width: 70%;

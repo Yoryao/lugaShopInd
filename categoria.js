@@ -2,6 +2,11 @@
 //realizar toast para producto existente en el carrito
 console.log("Productos Funcionando.");
 
+(function () {
+  // https://dashboard.emailjs.com/admin/integration
+  emailjs.init("iMFHtbtT-GUb9TxOF");
+})();
+
 //0)DECLARO VARIABLES A UTILIZAR
 let carrito = [
   {
@@ -198,7 +203,37 @@ function vaciarCarrito(){
   document.getElementById("items").innerText = "No hay productos en el Carrito.";
 }
 
+function mostrarFormulario(){
+let texto = "Hola Lucia, estoy interesada en los siguientes productos: ";
 
+carrito.forEach(producto => 
+  texto += `${producto.nomvbre}, con codigo ${producto.id}.` 
+
+  
+  )
+
+document.getElementById("textoFormulario").innerText = texto
+  console.log("se mostro el formulario." + texto)
+}
+
+function enviarPedido(){
+
+     document.getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = (Math.random() * 100000) | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm("contact_service", "contact_form", this).then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      });
+  };
 
 
 
