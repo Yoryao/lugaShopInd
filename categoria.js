@@ -207,20 +207,22 @@ function mostrarFormulario(){
 let texto = "Hola Lucia, estoy interesada en los siguientes productos: ";
 
 carrito.forEach(producto => 
-  texto += `${producto.nomvbre}, con codigo ${producto.id}.` 
+  texto += `${producto.nombre}, con codigo ${producto.id}.` 
 
   
   )
 
 document.getElementById("textoFormulario").innerText = texto
   console.log("se mostro el formulario." + texto)
+  cerrarCarrito();
 }
 
-function enviarPedido(){
+
 
      document.getElementById("contact-form")
       .addEventListener("submit", function (event) {
         event.preventDefault();
+        console.log("se envio formulario")
         // generate a five digit number for the contact_number variable
         this.contact_number.value = (Math.random() * 100000) | 0;
         // these IDs from the previous steps
@@ -233,7 +235,6 @@ function enviarPedido(){
           }
         );
       });
-  };
 
 
 
