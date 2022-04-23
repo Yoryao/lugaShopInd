@@ -1,94 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>LUGA INDUMENTARIA</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="images/logo.png" alt="LUGA" />
-        </div>
-        <div class="menu">
-          <ul>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#ComoComprar">¿Como comprar?</a></li>
-            <li><a href="#envios">Envios</a></li>
-          </ul>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/categoria.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <title>LUGA INDUMENTARIA</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="LUGA" />
       </div>
-    </header>
-    <section class="hero">
-      <img
-        class="hero-img"
-        src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
-        alt="hero"
-      />
-    </section>
-    <!-- Productos -->
-
-    <section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Newsletter -->
-
-    <section class="newsletter">
-      <h3>Enterate de las novedades</h3>
-      <p>Suscribite al newsletter y no te pierdas los nuevos ingresos</p>
-      <form action="">
-        <input type="email" placeholder="Ingresa tu correo" />
-        <button type="submit">Suscribirse</button>
-      </form>
-    </section>
-
-    <a href="" class="button__container--absolute">
-      <div class="button__whatsapp">
-        <p href="" class="msg">click aqui para hablar con nosotros</p>
-        <p>
-          <img
-            src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png"
-            alt=""
-          />
-        </p>
+      <div class="menu">
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li>
+            <p id="cartItems" onclick="abrirCarrito()">0</p>
+    </li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#ComoComprar">¿Como comprar?</a></li>
+          <li><a href="#envios">Envios</a></li>
+        </ul>
       </div>
-    </a>
-  </body>
+    </div>
+  </header>
+  <section class="hero">
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+      alt="hero" />
+  </section>
+  <!-- Productos -->
+
+  <section id="sectionCategorias">
+
+    <div id="categoriasContainer">
+
+    </div>
+
+  </section>
+
+
+  <section id="sectionProductos">
+
+    <div id="productosContainer">
+
+    </div>
+
+
+
+
+  </section>
+
+  <section id="modalContainer" class="modalContainer">
+    <div id="detalleContainer">
+    </div>
+  </section>
+
+  <section id="formularioContainer" class="formularioContainer">
+
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="from_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message" id="textoFormulario"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+
+
+
+
+
+
+
+
+</section>
+
+<section id="modalCarrito" class="modalCarrito">
+    <div id="carritoContainer">
+        <section class="carritoSection">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Item</td>
+                        <td>Producto</td>
+                        <td>Eliminar</td>
+                    </tr>
+                </thead>
+                <tbody id="items">
+
+                </tbody>
+            </table>
+        </section>
+
+        <button id="cerrarCarritoBtn" onClick="cerrarCarrito()">
+            CERRAR CARRITO
+        </button>
+        <button id="vaciarCarritoBtn" onClick="vaciarCarrito()">
+            VACIAR CARRITO
+        </button>
+        <button id="cerrarCarritoBtn" onClick="mostrarFormulario()">
+            ENVIAR PEDIDO
+        </button>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Newsletter -->
+
+  <section class="newsletter">
+    <h3>Enterate de las novedades</h3>
+    <p>Suscribite al newsletter y no te pierdas los nuevos ingresos</p>
+    <form action="">
+      <input type="email" placeholder="Ingresa tu correo" />
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+
+  <a href="" class="button__container--absolute">
+    <div class="button__whatsapp">
+      <p href="" class="msg">click aqui para hablar con nosotros</p>
+      <p>
+        <img src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png" alt="" />
+      </p>
+    </div>
+  </a>
+
+
+
+
+
+  <!-- TEMPLATES -->
+  <template id="template">
+    <section class="section">
+      <button id="categoryButton" class="section__image__button">
+      </button>
+      <p class="section_p" id="categoryP"></p>
+    </section>
+  </template>
+
+  <template id="templateProductos">
+    <section class="productosSection">
+      <img id="productosImage" class="productos__Image" src="" alt="">
+      <h3 id="productosTitle"></h3>
+      <p id="productosInfo"></p>
+      <button id="addButton" class="section__add__button"> Ver Detalle
+      </button>
+    </section>
+  </template>
+
+  <template id="templateDetalle">
+    <section class="detalleSection">
+      <button id="closeModal" onclick="cerrarModal()">Cerrar Modal
+      </button>
+      <button id="addToCart" onclick="">Agregar Producto
+      </button>
+      <img id="detalleImagen" src="" alt="">
+      <h2 id="detalleNombre"> Nombre del producto </h2>
+      <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
+        atque quas odit.</p>
+      <div>
+        <span class="talles"> S </span>
+        <span class="talles"> M </span>
+        <span class="talles"> L </span>
+        <span class="talles"> XL </span>
+      </div>
+      <ul id="listImagen">
+        <li><img id="detalleImagen1" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+        <li><img id="detalleImagen2" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+        <li><img id="detalleImagen3" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
+      </ul>
+    </section>
+  </template>
+
+  <template id="templateCarrito">
+
+  </template>
+  <!-- TEMPLATES END -->
+  <script src="./categoria.js"></script>
+</body>
+
 </html>

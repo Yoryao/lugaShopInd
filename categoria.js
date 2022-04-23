@@ -35,7 +35,7 @@ window.onload = function () {
 //2) capturo las categorias
 const loadCategorias = async () => {
   try {
-    const res = await fetch("categorias.json");
+    const res = await fetch("json/categorias.json");
     const data = await res.json();
     mostrarCategorias(data);
   } catch (error) {
@@ -79,10 +79,11 @@ function elegirCategoria(id) {
 //5) cargar productos.
 const loadProductos = async (id) => {
   try {
-    const res = await fetch("productos.json");
+    const res = await fetch("json/productos.json");
     const data = await res.json();
-
+    console.log("productos.json CARGADO")
     let filtrado = data.filter((item) => item.category == id);
+    
     mostrarProductos(filtrado);
   } catch (error) {
     console.log(error);
