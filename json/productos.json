@@ -8,7 +8,7 @@
     "rating": 4.26,
     "stock": 65,
     "brand": "Impression of Acqua Di Gio",
-    "category": "fragrances",
+    "category": "Abrigos",
     "thumbnail": "https://dummyjson.com/image/i/products/11/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/11/1.jpg",
@@ -26,7 +26,7 @@
     "rating": 4,
     "stock": 52,
     "brand": "Royal_Mirage",
-    "category": "fragrances",
+    "category": "Abrigos",
     "thumbnail": "https://dummyjson.com/image/i/products/12/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/12/1.jpg",
@@ -45,7 +45,7 @@
     "rating": 4.59,
     "stock": 61,
     "brand": "Fog Scent Xpressio",
-    "category": "fragrances",
+    "category": "Abrigos",
     "thumbnail": "https://dummyjson.com/image/i/products/13/thumbnail.webp",
     "images": [
       "https://dummyjson.com/image/i/products/13/1.jpg",
@@ -64,7 +64,7 @@
     "rating": 4.21,
     "stock": 114,
     "brand": "Al Munakh",
-    "category": "fragrances",
+    "category": "Abrigos",
     "thumbnail": "https://dummyjson.com/image/i/products/14/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/14/1.jpg",
@@ -82,7 +82,7 @@
     "rating": 4.7,
     "stock": 105,
     "brand": "Lord - Al-Rehab",
-    "category": "fragrances",
+    "category": "Abrigos",
     "thumbnail": "https://dummyjson.com/image/i/products/15/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/15/1.jpg",
@@ -101,7 +101,7 @@
     "rating": 4.83,
     "stock": 110,
     "brand": "L'Oreal Paris",
-    "category": "skincare",
+    "category": "Camisas y Blusas",
     "thumbnail": "https://dummyjson.com/image/i/products/16/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/16/1.png",
@@ -120,7 +120,7 @@
     "rating": 4.52,
     "stock": 78,
     "brand": "Hemani Tea",
-    "category": "skincare",
+    "category": "Camisas y Blusas",
     "thumbnail": "https://dummyjson.com/image/i/products/17/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/17/1.jpg",
@@ -138,7 +138,7 @@
     "rating": 4.56,
     "stock": 88,
     "brand": "Dermive",
-    "category": "skincare",
+    "category": "Camisas y Blusas",
     "thumbnail": "https://dummyjson.com/image/i/products/18/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/18/1.jpg",
@@ -157,7 +157,7 @@
     "rating": 4.42,
     "stock": 54,
     "brand": "ROREC White Rice",
-    "category": "skincare",
+    "category": "Camisas y Blusas",
     "thumbnail": "https://dummyjson.com/image/i/products/19/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/19/1.jpg",
@@ -175,7 +175,7 @@
     "rating": 4.06,
     "stock": 140,
     "brand": "Fair & Clear",
-    "category": "skincare",
+    "category": "Camisas y Blusas",
     "thumbnail": "https://dummyjson.com/image/i/products/20/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/20/1.jpg",
@@ -195,7 +195,7 @@
     "rating": 4.26,
     "stock": 39,
     "brand": "Professional Wear",
-    "category": "tops",
+    "category": "Minis y Shorts",
     "thumbnail": "https://dummyjson.com/image/i/products/36/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/36/1.jpg",
@@ -207,14 +207,14 @@
   },
   {
     "id": 37,
-    "title": "ank Tops for Womens/Girls",
+    "title": "ank Minis y Shorts for Womens/Girls",
     "description": "PACK OF 3 CAMISOLES ,VERY COMFORTABLE SOFT COTTON STUFF, COMFORTABLE IN ALL FOUR SEASONS",
     "price": 50,
     "discountPercentage": 12.05,
     "rating": 4.52,
     "stock": 107,
     "brand": "Soft Cotton",
-    "category": "tops",
+    "category": "Minis y Shorts",
     "thumbnail": "https://dummyjson.com/image/i/products/37/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/37/1.jpg",
@@ -227,13 +227,13 @@
   {
     "id": 38,
     "title": "sublimation plain kids tank",
-    "description": "sublimation plain kids tank tops wholesale",
+    "description": "sublimation plain kids tank Minis y Shorts wholesale",
     "price": 100,
     "discountPercentage": 11.12,
     "rating": 4.8,
     "stock": 20,
     "brand": "Soft Cotton",
-    "category": "tops",
+    "category": "Minis y Shorts",
     "thumbnail": "https://dummyjson.com/image/i/products/38/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/38/1.png",
@@ -251,7 +251,7 @@
     "rating": 4.55,
     "stock": 55,
     "brand": "Top Sweater",
-    "category": "tops",
+    "category": "Minis y Shorts",
     "thumbnail": "https://dummyjson.com/image/i/products/39/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/39/1.jpg",
@@ -270,7 +270,7 @@
     "rating": 4.91,
     "stock": 84,
     "brand": "Top Sweater",
-    "category": "tops",
+    "category": "Minis y Shorts",
     "thumbnail": "https://dummyjson.com/image/i/products/40/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/40/1.jpg",
@@ -286,7 +286,7 @@
     "rating": 4.65,
     "stock": 21,
     "brand": "RED MICKY MOUSE..",
-    "category": "womens-dresses",
+    "category": "Monos y Vestidos",
     "thumbnail": "https://dummyjson.com/image/i/products/41/thumbnail.webp",
     "images": [
       "https://dummyjson.com/image/i/products/41/1.jpg",
@@ -305,7 +305,7 @@
     "rating": 4.05,
     "stock": 148,
     "brand": "Digital Printed",
-    "category": "womens-dresses",
+    "category": "Monos y Vestidos",
     "thumbnail": "https://dummyjson.com/image/i/products/42/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/42/1.png",
@@ -324,7 +324,7 @@
     "rating": 4.31,
     "stock": 150,
     "brand": "Ghazi Fabric",
-    "category": "womens-dresses",
+    "category": "Monos y Vestidos",
     "thumbnail": "https://dummyjson.com/image/i/products/43/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/43/1.jpg",
@@ -343,7 +343,7 @@
     "rating": 4.03,
     "stock": 2,
     "brand": "Ghazi Fabric",
-    "category": "womens-dresses",
+    "category": "Monos y Vestidos",
     "thumbnail": "https://dummyjson.com/image/i/products/44/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/44/1.jpg",
@@ -362,7 +362,7 @@
     "rating": 4.67,
     "stock": 96,
     "brand": "IELGY",
-    "category": "womens-dresses",
+    "category": "Monos y Vestidos",
     "thumbnail": "https://dummyjson.com/image/i/products/45/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/45/1.jpg",
@@ -381,7 +381,7 @@
     "rating": 4.14,
     "stock": 72,
     "brand": "IELGY fashion",
-    "category": "womens-shoes",
+    "category": "Pantalones y Calzas",
     "thumbnail": "https://dummyjson.com/image/i/products/46/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/46/1.webp",
@@ -400,7 +400,7 @@
     "rating": 4.19,
     "stock": 50,
     "brand": "Synthetic Leather",
-    "category": "womens-shoes",
+    "category": "Pantalones y Calzas",
     "thumbnail": "https://dummyjson.com/image/i/products/47/thumbnail.jpeg",
     "images": [
       "https://dummyjson.com/image/i/products/47/1.jpg",
@@ -418,7 +418,7 @@
     "rating": 4.02,
     "stock": 25,
     "brand": "Sandals Flip Flops",
-    "category": "womens-shoes",
+    "category": "Pantalones y Calzas",
     "thumbnail": "https://dummyjson.com/image/i/products/48/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/48/1.jpg",
@@ -437,7 +437,7 @@
     "rating": 4.72,
     "stock": 107,
     "brand": "Maasai Sandals",
-    "category": "womens-shoes",
+    "category": "Pantalones y Calzas",
     "thumbnail": "https://dummyjson.com/image/i/products/49/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/49/1.jpg",
@@ -455,7 +455,7 @@
     "rating": 4.33,
     "stock": 46,
     "brand": "Arrivals Genuine",
-    "category": "womens-shoes",
+    "category": "Pantalones y Calzas",
     "thumbnail": "https://dummyjson.com/image/i/products/50/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/50/1.jpeg",
@@ -473,7 +473,7 @@
     "rating": 4.79,
     "stock": 24,
     "brand": "Eastern Watches",
-    "category": "womens-watches",
+    "category": "Tops y Remeras y bodys",
     "thumbnail": "https://dummyjson.com/image/i/products/66/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/66/1.jpg",
@@ -492,7 +492,7 @@
     "rating": 4.03,
     "stock": 46,
     "brand": "Eastern Watches",
-    "category": "womens-watches",
+    "category": "Tops y Remeras y bodys",
     "thumbnail": "https://dummyjson.com/image/i/products/67/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/67/1.jpg",
@@ -511,7 +511,7 @@
     "rating": 4.55,
     "stock": 77,
     "brand": "Luxury Digital",
-    "category": "womens-watches",
+    "category": "Tops y Remeras y bodys",
     "thumbnail": "https://dummyjson.com/image/i/products/68/thumbnail.webp",
     "images": [
       "https://dummyjson.com/image/i/products/68/1.jpg",
@@ -527,7 +527,7 @@
     "rating": 4.77,
     "stock": 89,
     "brand": "Watch Pearls",
-    "category": "womens-watches",
+    "category": "Tops y Remeras y bodys",
     "thumbnail": "https://dummyjson.com/image/i/products/69/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/69/1.jpg",
@@ -546,7 +546,7 @@
     "rating": 4.08,
     "stock": 111,
     "brand": "Bracelet",
-    "category": "womens-watches",
+    "category": "Tops y Remeras y bodys",
     "thumbnail": "https://dummyjson.com/image/i/products/70/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/70/1.jpg",
@@ -563,7 +563,7 @@
     "rating": 4.71,
     "stock": 17,
     "brand": "LouisWill",
-    "category": "womens-bags",
+    "category": "Accesorios",
     "thumbnail": "https://dummyjson.com/image/i/products/71/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/71/1.jpg",
@@ -581,7 +581,7 @@
     "rating": 4.91,
     "stock": 27,
     "brand": "LouisWill",
-    "category": "womens-bags",
+    "category": "Accesorios",
     "thumbnail": "https://dummyjson.com/image/i/products/72/thumbnail.webp",
     "images": [
       "https://dummyjson.com/image/i/products/72/1.jpg",
@@ -600,7 +600,7 @@
     "rating": 4.18,
     "stock": 101,
     "brand": "Bracelet",
-    "category": "womens-bags",
+    "category": "Accesorios",
     "thumbnail": "https://dummyjson.com/image/i/products/73/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/73/1.jpg",
@@ -618,7 +618,7 @@
     "rating": 4.01,
     "stock": 43,
     "brand": "Copenhagen Luxe",
-    "category": "womens-bags",
+    "category": "Accesorios",
     "thumbnail": "https://dummyjson.com/image/i/products/74/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/74/1.jpg",
@@ -637,7 +637,7 @@
     "rating": 4.93,
     "stock": 13,
     "brand": "Steal Frame",
-    "category": "womens-bags",
+    "category": "Accesorios",
     "thumbnail": "https://dummyjson.com/image/i/products/75/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/75/1.jpg",
@@ -655,7 +655,7 @@
     "rating": 4.61,
     "stock": 51,
     "brand": "Darojay",
-    "category": "womens-jewellery",
+    "category": "Indumentaria Masculina",
     "thumbnail": "https://dummyjson.com/image/i/products/76/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/76/1.jpg",
@@ -672,7 +672,7 @@
     "rating": 4.21,
     "stock": 149,
     "brand": "Copenhagen Luxe",
-    "category": "womens-jewellery",
+    "category": "Indumentaria Masculina",
     "thumbnail": "https://dummyjson.com/image/i/products/77/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/77/1.jpg",
@@ -690,7 +690,7 @@
     "rating": 4.69,
     "stock": 9,
     "brand": "Fashion Jewellery",
-    "category": "womens-jewellery",
+    "category": "Indumentaria Masculina",
     "thumbnail": "https://dummyjson.com/image/i/products/78/thumbnail.jpg",
     "images": ["https://dummyjson.com/image/i/products/78/thumbnail.jpg"]
   },
@@ -703,7 +703,7 @@
     "rating": 4.74,
     "stock": 16,
     "brand": "Fashion Jewellery",
-    "category": "womens-jewellery",
+    "category": "Indumentaria Masculina",
     "thumbnail": "https://dummyjson.com/image/i/products/79/thumbnail.jpg",
     "images": ["https://dummyjson.com/image/i/products/79/1.jpg"]
   },
@@ -716,7 +716,7 @@
     "rating": 4.59,
     "stock": 9,
     "brand": "Cuff Butterfly",
-    "category": "womens-jewellery",
+    "category": "Indumentaria Masculina",
     "thumbnail": "https://dummyjson.com/image/i/products/80/thumbnail.jpg",
     "images": [
       "https://dummyjson.com/image/i/products/80/1.jpg",
