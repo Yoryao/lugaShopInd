@@ -8,23 +8,7 @@ console.log("Productos Funcionando.");
 })();
 
 //0)DECLARO VARIABLES A UTILIZAR
-let carrito = [
-  {
-    posicion: 1,
-    nombre: "Women ",
-    id: 58,
-  },
-  {
-    posicion: 2,
-    nombre: "Heel",
-    id: 48,
-  },
-  {
-    posicion: 3,
-    nombre: "Strip",
-    id: 47,
-  },
-];
+let carrito = [];
 
 //1) llamo a las categorias.
 window.onload = function () {
@@ -81,9 +65,9 @@ const loadProductos = async (id) => {
   try {
     const res = await fetch("json/productos.json");
     const data = await res.json();
-    console.log("productos.json CARGADO")
+    console.log("productos.json CARGADO");
     let filtrado = data.filter((item) => item.category == id);
-    
+
     mostrarProductos(filtrado);
   } catch (error) {
     console.log(error);
@@ -118,7 +102,8 @@ const mostrarProductos = async (data) => {
 };
 
 const verDetalle = async (item) => {
-  const modal = document.getElementById("modalContainer");
+  console.log("Ver detalle " + item.title);
+  const modal = document.getElementById("modalDetalle");
   modal.classList.add("mostrar");
 
   const cardDetalle = document.getElementById("detalleContainer");
@@ -131,6 +116,7 @@ const verDetalle = async (item) => {
 
   clone.getElementById("addToCart").addEventListener("click", function () {
     agregarCarrito(item);
+    cerrarModal();
   });
 
   clone.getElementById("detalleImagen").setAttribute("src", item.images[0]);
@@ -147,14 +133,14 @@ const verDetalle = async (item) => {
 };
 
 function cerrarModal() {
-  let modal = document.getElementById("modalContainer");
+  let modal = document.getElementById("modalDetalle");
   console.log("cerrando Modal");
   modal.classList.remove("mostrar");
 }
 
 function agregarCarrito(item) {
   const productoExiste = carrito.find((producto) => producto.id === item.id);
-
+  console.log("se Agrego al Carrito");
   if (productoExiste === undefined) {
     let productoCarrito = {
       posicion: carrito.length + 1,
@@ -164,7 +150,7 @@ function agregarCarrito(item) {
     carrito.push(productoCarrito);
     sumarItems();
 
-    console.log(carrito);
+    cerrarCarrito();
   } else {
     console.log("El producto ya existe en el carrito.");
   }
@@ -177,11 +163,19 @@ function sumarItems() {
   document.getElementById("cartItems").textContent = contador;
 }
 
+function restarItems() {
+  contador--;
+  document.getElementById("cartItems").textContent = contador;
+}
+
+function resetItems() {
+  contador = 0;
+  document.getElementById("cartItems").textContent = contador;
+}
+
 function abrirCarrito() {
-  document.getElementById("cartItems").addEventListener("click", () => {
-    const modal = document.getElementById("modalCarrito");
-    modal.classList.add("mostrarCarrito");
-  });
+  const modal = document.getElementById("modalCarrito");
+  modal.classList.add("mostrarCarrito");
 
   let tabla = "";
   carrito.forEach((producto) => {
@@ -195,48 +189,57 @@ function abrirCarrito() {
 function borrarIt(item) {
   let newCarrito = carrito.filter((producto) => producto.id != item);
   carrito = newCarrito;
+  restarItems();
   abrirCarrito();
 }
 
-function vaciarCarrito(){
+function vaciarCarrito() {
   carrito = [];
+  resetItems();
   abrirCarrito();
-  document.getElementById("items").innerText = "No hay productos en el Carrito.";
+  document.getElementById("items").innerText =
+    "No hay productos en el Carrito.";
 }
 
-function mostrarFormulario(){
-let texto = "Hola Lucia, estoy interesada en los siguientes productos: ";
+function mostrarFormulario() {
+  const modal = document.getElementById("modalFormulario");
+  modal.classList.add("mostrarFormulario");
 
-carrito.forEach(producto => 
-  texto += `${producto.nombre}, con codigo ${producto.id}.` 
+  let texto = "Hola Lucia, estoy interesada en los siguientes productos: ";
 
-  
-  )
+  carrito.forEach(
+    (producto) => (texto += `${producto.nombre}, con codigo ${producto.id}.`)
+  );
 
-document.getElementById("textoFormulario").innerText = texto
-  console.log("se mostro el formulario." + texto)
+  document.getElementById("textoFormulario").innerText = texto;
+  console.log("se mostro el formulario." + texto);
   cerrarCarrito();
 }
 
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("se envio formulario");
+    // generate a five digit number for the contact_number variable
+    this.contact_number.value = (Math.random() * 100000) | 0;
+    // these IDs from the previous steps
+    emailjs.sendForm("contact_service", "contact_form", this).then(
+      function () {
+        console.log("SUCCESS!");
+cerrarFormulario();
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  });
 
-
-     document.getElementById("contact-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        console.log("se envio formulario")
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = (Math.random() * 100000) | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm("contact_service", "contact_form", this).then(
-          function () {
-            console.log("SUCCESS!");
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-      });
-
+  function cerrarFormulario() {
+    const modal = document.getElementById("modalFormulario");
+    console.log("cerrando Modal");
+    modal.classList.remove("mostrarFormulario");
+  }
 
 
 
@@ -248,12 +251,16 @@ function cerrarCarrito() {
 
 window.onclick = function (event) {
   const modalCarrito = document.getElementById("modalCarrito");
-  let modal = document.getElementById("modalContainer");
+  const modal = document.getElementById("modalDetalle");
+  const modalFormulario = document.getElementById("modalFormulario");
 
   if (event.target == modal) {
     modal.classList.remove("mostrar");
   }
   if (event.target == modalCarrito) {
     modalCarrito.classList.remove("mostrarCarrito");
+  }
+  if (event.target == modalFormulario) {
+    modalFormulario.classList.remove("mostrarFormulario");
   }
 };

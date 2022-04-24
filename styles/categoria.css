@@ -58,29 +58,6 @@
     object-fit:fill;
 }
 
-.modalContainer .formularioContainer {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    overflow: auto;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(26, 27, 21, 0.7);
-}
-
-.mostrar {
-    display: block;
-    opacity: 1;
-}
-
-#detalleContainer #formularioContainer{
-    background-color: aquamarine;
-    margin: 15% auto;
-    width: 70%;
-    padding: 30px;
-}
 
 #listImagen {
     display: flex;
@@ -91,7 +68,7 @@
     width: 100px;
 }
 
-.modalCarrito {
+.modalCarrito, .modalDetalle, .modalFormulario {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -103,14 +80,15 @@
     background-color: rgba(26, 27, 21, 0.7);
 }
 
-.mostrarCarrito {
+.mostrarCarrito, .mostrar, .mostrarFormulario {
     display: block;
     opacity: 1;
 }
 
-#carritoContainer {
+#detalleContainer, #contact-form, #carritoContainer{
     background-color: aquamarine;
-    margin: 15% auto;
+    margin: 30px auto;
     width: 70%;
     padding: 30px;
 }
+
