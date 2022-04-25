@@ -65,7 +65,7 @@ const loadProductos = async (id) => {
   try {
     const res = await fetch("json/productos.json");
     const data = await res.json();
-    console.log("productos.json CARGADO");
+
     let filtrado = data.filter((item) => item.category == id);
 
     mostrarProductos(filtrado);
@@ -149,10 +149,33 @@ function agregarCarrito(item) {
     };
     carrito.push(productoCarrito);
     sumarItems();
-
     cerrarCarrito();
+    Toastify({
+      text: "El producto se agrego al carrito.",
+      duration: 3000,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "pink",
+        borderRadius: "5px",
+        color: "black"
+      },
+    }).showToast();
   } else {
     console.log("El producto ya existe en el carrito.");
+    Toastify({
+      text: "El producto ya existe en el carrito.",
+      duration: 3000,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "pink",
+        borderRadius: "5px",
+        color: "black"
+      },
+    }).showToast();
   }
 }
 
@@ -187,6 +210,19 @@ function abrirCarrito() {
 }
 
 function borrarIt(item) {
+
+  Toastify({
+    text: `Se borro el item ${item}.`,
+    duration: 3000,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "pink",
+      borderRadius: "5px",
+      color: "black"
+    },
+  }).showToast();
   let newCarrito = carrito.filter((producto) => producto.id != item);
   carrito = newCarrito;
   restarItems();
