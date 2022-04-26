@@ -64,11 +64,14 @@ function elegirCategoria(id) {
 const loadProductos = async (id) => {
   try {
     const res = await fetch("json/productos.json");
-    const data = await res.json();
+    const catalogo = await res.json();
+    let filtrado = catalogo.filter((item) => item.category == id);
 
-    let filtrado = data.filter((item) => item.category == id);
-
-    mostrarProductos(filtrado);
+    if (id == undefined) {
+      mostrarProductos(catalogo);
+    } else {
+      mostrarProductos(filtrado);
+    }
   } catch (error) {
     console.log(error);
   } finally {
@@ -159,7 +162,7 @@ function agregarCarrito(item) {
       style: {
         background: "pink",
         borderRadius: "5px",
-        color: "black"
+        color: "black",
       },
     }).showToast();
   } else {
@@ -173,7 +176,7 @@ function agregarCarrito(item) {
       style: {
         background: "pink",
         borderRadius: "5px",
-        color: "black"
+        color: "black",
       },
     }).showToast();
   }
@@ -202,7 +205,7 @@ function abrirCarrito() {
 
   let tabla = "";
   carrito.forEach((producto) => {
-    let fila = `<tr><td> ${producto.nombre} </td><td> ${producto.id}</td><td><button onclick="borrarIt(${producto.id})"> X </button></tr>`;
+    let fila = `<tr><td> ${producto.id} </td><td> ${producto.nombre}</td><td><button onclick="borrarIt(${producto.id})"> X </button></tr>`;
     tabla += fila;
   });
 
@@ -210,7 +213,6 @@ function abrirCarrito() {
 }
 
 function borrarIt(item) {
-
   Toastify({
     text: `Se borro el item ${item}.`,
     duration: 3000,
@@ -220,13 +222,17 @@ function borrarIt(item) {
     style: {
       background: "pink",
       borderRadius: "5px",
-      color: "black"
+      color: "black",
     },
   }).showToast();
   let newCarrito = carrito.filter((producto) => producto.id != item);
   carrito = newCarrito;
   restarItems();
   abrirCarrito();
+
+  if (carrito.length == 0) {
+    vaciarCarrito();
+  }
 }
 
 function vaciarCarrito() {
@@ -238,46 +244,70 @@ function vaciarCarrito() {
 }
 
 function mostrarFormulario() {
+  let nombreForm = document.getElementById("nombreForm");
+  let mailForm = document.getElementById("mailForm");
+  let textoForm = document.getElementById("textoForm");
+  nombreForm.value = "nombre";
+  mailForm.value = "mail";
+  textoForm.value = "Pedido";
+
   const modal = document.getElementById("modalFormulario");
   modal.classList.add("mostrarFormulario");
 
-  let texto = "Hola Lucia, estoy interesada en los siguientes productos: ";
+  textoPedido = "Hola Lucia, estoy interesada en los siguientes productos: ";
 
   carrito.forEach(
-    (producto) => (texto += `${producto.nombre}, con codigo ${producto.id}.`)
+    (producto) =>
+      (textoPedido += `${producto.nombre}, con codigo ${producto.id}. `)
   );
 
-  document.getElementById("textoFormulario").innerText = texto;
-  console.log("se mostro el formulario." + texto);
+
+  document.getElementById("textoForm");
+  textoForm.value = textoPedido;
+  console.log("se mostro el formulario." + textoPedido);
   cerrarCarrito();
 }
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    console.log("se envio formulario");
-    // generate a five digit number for the contact_number variable
-    this.contact_number.value = (Math.random() * 100000) | 0;
-    // these IDs from the previous steps
-    emailjs.sendForm("contact_service", "contact_form", this).then(
-      function () {
-        console.log("SUCCESS!");
-cerrarFormulario();
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-  });
+function enviarFormulario() {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log("se envio formulario");
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = (Math.random() * 100000) | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm("contact_service", "contact_form", this).then(
+        function () {
+          Toastify({
+            text: "Se envio el pedido, en breve nos comunicaremos con vos.",
+            duration: 3000,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "pink",
+              borderRadius: "5px",
+              color: "black",
+            },
+          }).showToast();
 
-  function cerrarFormulario() {
-    const modal = document.getElementById("modalFormulario");
-    console.log("cerrando Modal");
-    modal.classList.remove("mostrarFormulario");
-  }
+          vaciarCarrito();
+          cerrarCarrito();
+          cerrarFormulario();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+}
 
-
+function cerrarFormulario() {
+  const modal = document.getElementById("modalFormulario");
+  console.log("cerrando Modal");
+  modal.classList.remove("mostrarFormulario");
+}
 
 function cerrarCarrito() {
   const modal = document.getElementById("modalCarrito");

@@ -24,24 +24,27 @@
       </div>
       <div class="menu">
         <ul>
-          <li><a href="#productos" onclick="loadProductos()">Productos</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li>
-            <p id="cartItems" onClick="abrirCarrito()">0</p>
+          <li><a href="#sectionContainer" onclick="loadProductos()">
+            Productos</a></li>
+          <li><a href="#sectionNosotros">Nosotros</a></li>
+          <li><a href="#sectionContacto">Contacto</a></li>
+          <li><a href="#sectionComprar">¿Como comprar?</a></li>
+          <li><a href="#sectionEnvios">Envios</a></li>
+          <li id="borderLi" onclick="abrirCarrito()">
+            <p id="cartItems" >0</p>
+            <img id="shoppingBagIcon" src="./images/shopping_bag_icon.png" alt="Shopping Bag Icon">
+            
           </li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#ComoComprar">¿Como comprar?</a></li>
-          <li><a href="#envios">Envios</a></li>
         </ul>
       </div>
     </div>
   </header>
 
-  <section class="hero">
+  <!-- <section class="hero">
     <img class="hero-img"
       src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
       alt="hero" />
-  </section>
+  </section> -->
   <!-- Productos -->
 
   <section id="sectionCategorias">
@@ -97,13 +100,13 @@
         </table>
       </section>
 
-      <button id="cerrarCarritoBtn" onClick="cerrarCarrito()">
+      <button id="cerrarCarritoBtn" onclick="cerrarCarrito()">
         Volver
       </button>
-      <button id="vaciarCarritoBtn" onClick="vaciarCarrito()">
+      <button id="vaciarCarritoBtn" onclick="vaciarCarrito()">
         Vaciar Carrito
       </button>
-      <button id="cerrarCarritoBtn" onClick="mostrarFormulario()">
+      <button id="cerrarCarritoBtn" onclick="mostrarFormulario()">
         Enviar Pedido
       </button>
     </div>
@@ -115,21 +118,47 @@
     <form id="contact-form">
       <input type="hidden" name="contact_number">
       <label>Name</label>
-      <input type="text" name="from_name">
+      <input type="text" name="from_name" id="nombreForm">
       <label>Email</label>
-      <input type="email" name="user_email">
+      <input type="email" name="user_email" id="mailForm">
       <label>Message</label>
-      <textarea name="message" id="textoFormulario"></textarea>
-      <input type="submit" value="Enviar">
+      <textarea name="message" id="textoForm"></textarea>
+      <input type="submit" value="Enviar" onclick="enviarFormulario()">
       <input type="button" onclick="cerrarFormulario()" value="Cerrar Formulario">
     </form>
 
   </section>
 
 
+
+<!-- NOSOTROS -->
+
+  <section class="newsletter" id="sectionNosotros">
+    <h3>Nosotros</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+  </section>
+
+  <section class="newsletter" id="sectionContacto">
+    <h3>CONTACTO</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+  </section>
+
+  <section class="newsletter" id="sectionComprar">
+    <h3>¿Como Comprar?</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+  </section>
+
+  <section class="newsletter" id="sectionEnvios">
+    <h3>Envios</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+  </section>
+
+
+
+
   <!-- Newsletter -->
 
-  <section class="newsletter">
+  <section class="newsletter" id="sectionNewsletter">
     <h3>Enterate de las novedades</h3>
     <p>Suscribite al newsletter y no te pierdas los nuevos ingresos</p>
     <form action="">
