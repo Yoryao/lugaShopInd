@@ -86,23 +86,33 @@ const mostrarProductos = async (data) => {
 
   const templateProducto = document.getElementById("templateProductos").content;
   const fragment = document.createDocumentFragment();
+
+
+ 
+
+
+
+
   data.forEach((item) => {
     const clone = templateProducto.cloneNode(true);
 
     clone.getElementById("productosImage").setAttribute("src", item.images[0]);
     clone
       .getElementById("productosImage")
-      .setAttribute("alt", `Photo of ${item.title}`);
+      .setAttribute("alt", `Photo of ${item.title}`)
+  
     clone.getElementById("productosTitle").textContent = item.title;
     clone.getElementById("productosInfo").textContent = item.description;
     clone.getElementById("addButton").addEventListener("click", function () {
       verDetalle(item);
     });
-    //       mostrarProductos(item.nombre, item.id);
+
     fragment.appendChild(clone);
   });
   cardProductos.appendChild(fragment);
 };
+
+
 
 const verDetalle = async (item) => {
   console.log("Ver detalle " + item.title);
@@ -244,11 +254,7 @@ function vaciarCarrito() {
 }
 
 function mostrarFormulario() {
-  let nombreForm = document.getElementById("nombreForm");
-  let mailForm = document.getElementById("mailForm");
   let textoForm = document.getElementById("textoForm");
-  nombreForm.value = "nombre";
-  mailForm.value = "mail";
   textoForm.value = "Pedido";
 
   const modal = document.getElementById("modalFormulario");
@@ -260,7 +266,6 @@ function mostrarFormulario() {
     (producto) =>
       (textoPedido += `${producto.nombre}, con codigo ${producto.id}. `)
   );
-
 
   document.getElementById("textoForm");
   textoForm.value = textoPedido;
