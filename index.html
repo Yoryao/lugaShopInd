@@ -17,10 +17,12 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="container">
       <div class="logo">
-        <img src="images/logo.png" alt="LUGA" />
+        <a href="index.html">
+        <img src="images/logo.JPG"  alt="LUGA" />
+      </a>
       </div>
       <div class="menu">
         <ul>
@@ -118,9 +120,9 @@
     <form id="contact-form">
       <input type="hidden" name="contact_number">
       <label>Name</label>
-      <input type="text" name="from_name" id="nombreForm">
+      <input type="text" name="from_name" id="nombreForm" placeholder="Ingresa tu nombre" required>
       <label>Email</label>
-      <input type="email" name="user_email" id="mailForm">
+      <input type="email" name="user_email" id="mailForm" placeholder="Ingresa tu e-mail" required>
       <label>Message</label>
       <textarea name="message" id="textoForm"></textarea>
       <input type="submit" value="Enviar" onclick="enviarFormulario()">
@@ -178,6 +180,18 @@
       <button type="submit">Suscribirse</button>
     </form>
   </section>
+
+<a href="#header" id="arrowUpAnchor">
+     <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
+</a>
+
+
+
+
+
+
+
+
 
   <a href="" class="button__container--absolute">
     <div class="button__whatsapp">
