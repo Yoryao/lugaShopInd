@@ -136,10 +136,6 @@ const verDetalle = async (item) => {
   clone.getElementById("detalleNombre").textContent = item.title;
   clone.getElementById("detalleDescripcion").textContent = item.description;
 
-  clone.getElementById("detalleImagen1").setAttribute("src", item.images[1]);
-  clone.getElementById("detalleImagen2").setAttribute("src", item.images[2]);
-  clone.getElementById("detalleImagen3").setAttribute("src", item.images[3]);
-
   fragment.appendChild(clone);
 
   cardDetalle.appendChild(fragment);

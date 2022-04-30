@@ -23,25 +23,52 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sectionProductos {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .productosSection {
   display: flex;
   flex-direction: column;
+  align-content: space-around;
+  justify-content: space-between;
+  margin: 1%;
+  padding: 2%;
   flex-wrap: wrap;
-  height: 500px;
-  width: 20%;
-  padding-left: 5px;
-  padding-right: 5px;
+  height: 250px;
+  width: 18%;
   text-align: center;
+  border: solid 1px black;
+  border-radius: 5px;
 }
 
 .productos__Image {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  align-self: center;
   background-position: center;
-  background-size: 150px 150px;
+  background-size: 120px 120px;
+  border-radius: 10%;
 }
+
+.productosTitulo {
+  font-size: 1.3rem;
+
+
+}
+
+.productosDescripcion {
+  font-size: .9rem;
+  display: none;
+
+
+}
+
 
 .section__image__button {
   background: url(../images/eclipseSmall.gif);
@@ -53,11 +80,10 @@
   background-size: 100% 100%;
   border-radius: 15px;
   object-fit: fill;
-  
 }
 
 #listImagen {
-  display: flex;
+  display: none;
   flex-direction: row;
 }
 
@@ -77,6 +103,7 @@
   height: 100vh;
   width: 100vw;
   background-color: rgba(26, 27, 21, 0.7);
+  
 }
 
 .mostrarCarrito,
@@ -90,10 +117,58 @@
 #contact-form,
 #carritoContainer {
   background-color: aquamarine;
+  height: 80%;
   margin: 30px auto;
   width: 70%;
-  padding: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 35px;
+  
 }
+
+.detalleSection {
+  margin: 10px;
+  padding: 5px 10px 5px 10px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalleImagen {
+  height: 40%;
+  width: auto;
+  align-self: center;
+}
+
+.detalleDescripcion {
+  width: 80%;
+  text-align: center;
+}
+
+.detalleBtn {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: space-evenly;
+}
+
+.detalleBtn button {
+  padding: 5px 40px;
+  background-color: blueviolet;
+}
+
 
 p {
   color: rgba(26, 27, 21, 0.7) !important;
@@ -120,61 +195,6 @@ p {
   cursor: pointer;
 }
 
-.lds-heart {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  transform: rotate(45deg);
-  transform-origin: 40px 40px;
-}
-.lds-heart div {
-  top: 32px;
-  left: 32px;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.lds-heart div:after,
-.lds-heart div:before {
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: #fff;
-}
-.lds-heart div:before {
-  left: -24px;
-  border-radius: 50% 0 0 50%;
-}
-.lds-heart div:after {
-  top: -24px;
-  border-radius: 50% 50% 0 0;
-}
-@keyframes lds-heart {
-  0% {
-    transform: scale(0.95);
-  }
-  5% {
-    transform: scale(1.1);
-  }
-  39% {
-    transform: scale(0.85);
-  }
-  45% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
-
 #imageLoaderContainer {
   border: 1px solid black;
   display: flex;
@@ -193,14 +213,13 @@ p {
   background-color: transparent;
 }
 
-.section_p{
+.section_p {
   padding: 15px 0 35px 0;
-
 }
 
 #loadProductosBtn {
   width: 25%;
-  margin-top: 25px ;
+  margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
@@ -209,6 +228,5 @@ p {
 #sectionCategorias {
   display: flex;
   flex-direction: column;
- align-items: center;
- 
+  align-items: center;
 }

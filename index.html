@@ -21,8 +21,8 @@
     <div class="container">
       <div class="logo">
         <a href="index.html">
-        <img src="images/logo.JPG"  alt="LUGA" />
-      </a>
+          <img src="images/logo.JPG" alt="LUGA" />
+        </a>
       </div>
       <div class="menu">
         <ul>
@@ -42,7 +42,7 @@
     </div>
   </header>
 
-   <section class="hero">
+  <section class="hero">
     <img class="hero-img"
       src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
       alt="hero" />
@@ -51,7 +51,7 @@
 
   <section id="sectionCategorias" class="container">
     <h3 id="productosTitulo">Nuestros Productos</h3>
-    <div id="categoriasContainer" >
+    <div id="categoriasContainer">
     </div>
     <button id="loadProductosBtn" onclick="loadProductos()">Ver todos nuestros productos</button>
   </section>
@@ -63,27 +63,26 @@
 
   <section id="modalDetalle" class="modalDetalle">
     <div id="detalleContainer">
+     
+        <img id="detalleImagen" class="detalleImagen" src="" alt="">
+        <h2 id="detalleNombre"> Nombre del producto </h2>
+        <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
+          atque quas odit.</p>
 
 
-      <button id="closeModal" onClick="cerrarModal()">Volver</button>
-      <button id="addToCart" onClick=""> Agregar Producto</button>
-      <img id="detalleImagen" src="" alt="">
-      <h2 id="detalleNombre"> Nombre del producto </h2>
-      <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
-        atque quas odit.</p>
-      <div>
-        <span class="talles"> S </span>
-        <span class="talles"> M </span>
-        <span class="talles"> L </span>
-        <span class="talles"> XL </span>
+        <div>
+          <span class="talles"> S </span>
+          <span class="talles"> M </span>
+          <span class="talles"> L </span>
+          <span class="talles"> XL </span>
+        </div>
+
+
+        <div>
+          <button id="closeModal" onClick="cerrarModal()">Volver</button>
+          <button id="addToCart" onClick=""> Agregar Producto</button>
+       
       </div>
-      <ul id="listImagen">
-        <li><img id="detalleImagen1" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-        <li><img id="detalleImagen2" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-        <li><img id="detalleImagen3" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-      </ul>
-
-
     </div>
   </section>
 
@@ -137,7 +136,7 @@
 
   <!-- NOSOTROS -->
 
-  <section class="newsletter" id="sectionNosotros">
+  <section class="newsletter container" id="sectionNosotros">
     <h3>Nosotros</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
       architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
@@ -145,7 +144,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
-  <section class="newsletter" id="sectionContacto">
+  <section class="newsletter container " id="sectionContacto">
     <h3>CONTACTO</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
       architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
@@ -153,7 +152,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
-  <section class="newsletter" id="sectionComprar">
+  <section class="newsletter container" id="sectionComprar">
     <h3>¿Como Comprar?</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
       architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
@@ -161,7 +160,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
-  <section class="newsletter" id="sectionEnvios">
+  <section class="newsletter container" id="sectionEnvios">
     <h3>Envios</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
       architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
@@ -183,9 +182,9 @@
     </form>
   </section>
 
-<a href="#header" id="arrowUpAnchor">
-     <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
-</a>
+  <a href="#header" id="arrowUpAnchor">
+    <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
+  </a>
 
 
 
@@ -215,9 +214,9 @@
 
   <template id="templateProductos">
     <section class="productosSection">
-        <img id="productosImage" class="productos__Image" src="" alt="">
-      <h3 id="productosTitle"></h3>
-      <p id="productosInfo"></p>
+      <img id="productosImage" class="productos__Image" src="" alt="">
+      <h3 id="productosTitle" class="productosTitulo"></h3>
+      <p id="productosInfo" class="productosDescripcion"></p>
       <button id="addButton" class="section__add__button"> Ver Detalle
       </button>
     </section>
@@ -225,13 +224,9 @@
 
   <template id="templateDetalle">
     <section class="detalleSection">
-      <button id="closeModal" onclick="cerrarModal()">Cerrar Modal
-      </button>
-      <button id="addToCart" onclick="">Agregar Producto
-      </button>
-      <img id="detalleImagen" src="" alt="">
+      <img id="detalleImagen" class="detalleImagen" src="" alt="">
       <h2 id="detalleNombre"> Nombre del producto </h2>
-      <p id="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
+      <p id="detalleDescripcion" class="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum qui, fuga beatae
         atque quas odit.</p>
       <div>
         <span class="talles"> S </span>
@@ -239,11 +234,14 @@
         <span class="talles"> L </span>
         <span class="talles"> XL </span>
       </div>
-      <ul id="listImagen">
-        <li><img id="detalleImagen1" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-        <li><img id="detalleImagen2" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-        <li><img id="detalleImagen3" src="https://picsum.photos/50/50?random" alt="" class="altImagen"></li>
-      </ul>
+
+
+      <div class="detalleBtn">
+      <button id="closeModal" onclick="cerrarModal()">Cerrar Modal
+      </button>
+      <button id="addToCart" onclick="">Agregar Producto
+      </button>
+    </div>
     </section>
   </template>
 
