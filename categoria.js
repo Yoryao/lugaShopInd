@@ -8,7 +8,26 @@ console.log("Productos Funcionando.");
 })();
 
 //0)DECLARO VARIABLES A UTILIZAR
-let carrito = [];
+let carrito = [
+  {
+    posicion: 1,
+    nombre: "Remera",
+    id: 545,
+  },
+  {
+    posicion:2,
+    nombre: "Pollera",
+    id: 570,
+  },
+  {
+    posicion: 3,
+    nombre: "Pantalon",
+    id: 565,
+  }
+
+
+
+];
 
 //1) llamo a las categorias.
 window.onload = function () {
@@ -211,7 +230,7 @@ function abrirCarrito() {
 
   let tabla = "";
   carrito.forEach((producto) => {
-    let fila = `<tr><td> ${producto.id} </td><td> ${producto.nombre}</td><td><button onclick="borrarIt(${producto.id})"> X </button></tr>`;
+    let fila = `<tr><td> ${producto.id} </td><td> ${producto.nombre}</td><td><button onclick="borrarIt(${producto.id})" class="borrarBtn"> X </button></tr>`;
     tabla += fila;
   });
 

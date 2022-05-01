@@ -117,7 +117,7 @@
 #contact-form,
 #carritoContainer {
   background-color: aquamarine;
-  height: 80%;
+  height: 75%;
   margin: 30px auto;
   width: 70%;
   padding: 10px;
@@ -133,6 +133,7 @@
 }
 
 .detalleSection {
+  height: 90%;
   margin: 10px;
   padding: 5px 10px 5px 10px;
   border-top-left-radius: 35px;
@@ -142,12 +143,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
+  align-self: center  ;
 }
 
 .detalleImagen {
-  height: 40%;
+  height: 50%;
   width: auto;
   align-self: center;
+  border-radius: 15px;
 }
 
 .detalleDescripcion {
@@ -165,9 +169,25 @@
 }
 
 .detalleBtn button {
+  width: 40%;
   padding: 5px 40px;
   background-color: blueviolet;
+  border-radius: 5px;
 }
+.botonCarrito {
+  width: 30%;
+  padding: 5px 20px;
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
+#botoneraCarrito {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 
 
 p {
@@ -229,4 +249,55 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#carritoTable {
+  width: 100% !important;
+  background-color: darkgreen !important;
+
+}
+
+
+
+#items{
+  text-align: center;
+  }
+
+  #carritoContainer {
+    height: auto;
+  }
+
+  .borrarBtn {
+    display: inline-flex;
+    margin-left: -10px;
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+#contact-form {
+
+  height: 50%;
+  margin: 30px auto;
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 35px;
+  
+}
+
+.formParts {
+  display: flex;
+  flex-direction: row;
 }
