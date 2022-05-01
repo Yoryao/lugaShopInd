@@ -8,7 +8,26 @@ console.log("Productos Funcionando.");
 })();
 
 //0)DECLARO VARIABLES A UTILIZAR
-let carrito = [];
+let carrito = [
+  {
+    posicion: 1,
+    nombre: "Remera",
+    id: 545,
+  },
+  {
+    posicion:2,
+    nombre: "Pollera",
+    id: 570,
+  },
+  {
+    posicion: 3,
+    nombre: "Pantalon",
+    id: 565,
+  }
+
+
+
+];
 
 //1) llamo a las categorias.
 window.onload = function () {
@@ -136,10 +155,6 @@ const verDetalle = async (item) => {
   clone.getElementById("detalleNombre").textContent = item.title;
   clone.getElementById("detalleDescripcion").textContent = item.description;
 
-  clone.getElementById("detalleImagen1").setAttribute("src", item.images[1]);
-  clone.getElementById("detalleImagen2").setAttribute("src", item.images[2]);
-  clone.getElementById("detalleImagen3").setAttribute("src", item.images[3]);
-
   fragment.appendChild(clone);
 
   cardDetalle.appendChild(fragment);
@@ -215,7 +230,7 @@ function abrirCarrito() {
 
   let tabla = "";
   carrito.forEach((producto) => {
-    let fila = `<tr><td> ${producto.id} </td><td> ${producto.nombre}</td><td><button onclick="borrarIt(${producto.id})"> X </button></tr>`;
+    let fila = `<tr><td> ${producto.id} </td><td> ${producto.nombre}</td><td><button onclick="borrarIt(${producto.id})" class="borrarBtn"> X </button></tr>`;
     tabla += fila;
   });
 
