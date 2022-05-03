@@ -252,7 +252,7 @@ p {
 }
 #carritoTable {
   width: 100% !important;
-  background-color: darkgreen !important;
+
 
 }
 
@@ -262,8 +262,12 @@ p {
   text-align: center;
   }
 
+
+  
   #carritoContainer {
     height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   .borrarBtn {
@@ -282,7 +286,7 @@ p {
 
 #contact-form {
 
-  height: 50%;
+  height: 70%;
   margin: 30px auto;
   width: 70%;
   padding: 10px;
@@ -297,7 +301,62 @@ p {
   
 }
 
-.formParts {
-  display: flex;
+.formParts  {
+  width: 80%;
+  padding: 10px;
+   display: flex;
   flex-direction: row;
+  border: 1px solid black;
+ 
+}
+
+.labels {
+  width: 30%;
+}
+
+#submitForm {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formBtn {
+  width: 20%;
+  padding: 5px;
+}
+
+#textoForm {
+  width: 70%;
+  height: 100%;
+}
+
+#messageForm {
+  height: 150px;
+}
+
+.formImputs {
+  width: 70%;
+}
+#footer {
+  width: 100%;
+  padding: 5px;
+  margin-left: 0;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: chartreuse;
+  flex-direction: row;
+  justify-content:center;
+}
+
+#redesLink {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  background-color: none;
+
+}
+.redesImg {
+  height: 30px;
+  width: auto;
 }

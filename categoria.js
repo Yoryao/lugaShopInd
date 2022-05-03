@@ -180,7 +180,7 @@ function agregarCarrito(item) {
     cerrarCarrito();
     Toastify({
       text: "El producto se agrego al carrito.",
-      duration: 3000,
+      duration: 1500,
       gravity: "top", // `top` or `bottom`
       position: "center", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -194,7 +194,7 @@ function agregarCarrito(item) {
     console.log("El producto ya existe en el carrito.");
     Toastify({
       text: "El producto ya existe en el carrito.",
-      duration: 3000,
+      duration: 1500,
       gravity: "top", // `top` or `bottom`
       position: "center", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -240,7 +240,7 @@ function abrirCarrito() {
 function borrarIt(item) {
   Toastify({
     text: `Se borro el item ${item}.`,
-    duration: 3000,
+    duration: 1500,
     gravity: "top", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -301,7 +301,7 @@ function enviarFormulario() {
         function () {
           Toastify({
             text: "Se envio el pedido, en breve nos comunicaremos con vos.",
-            duration: 3000,
+            duration: 1500,
             gravity: "top", // `top` or `bottom`
             position: "center", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
