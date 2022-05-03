@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header id="header">
     <div class="container">
       <div class="logo">
@@ -41,25 +43,34 @@
       </div>
     </div>
   </header>
+  <!-- FIN DE HEADER -->
 
+  <!-- IMAGEN PRINCIPAL -->
   <section class="hero">
     <img class="hero-img"
       src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
       alt="hero" />
   </section>
-  <!-- Productos -->
+  <!-- FINAL IMAGEN PRINCIPAL -->
+
+
+  <!-- CATEGORIAS -->
 
   <section id="sectionCategorias" class="container">
     <h3 id="productosTitulo">Nuestros Productos</h3>
     <div id="categoriasContainer">
     </div>
-    <button id="loadProductosBtn" onclick="loadProductos()">Ver todos nuestros productos</button>
+    <button id="loadProductosBtn" onclick="loadProductos()">Ver todos los productos y ofertas</button>
   </section>
 
+  <!-- FIN CATEGORIAS -->
+
+  <!-- PRODUCTOS -->
   <section id="sectionProductos">
     <div id="productosContainer">
     </div>
   </section>
+  <!-- FIN PRODUCTOS -->
 
   <section id="modalDetalle" class="modalDetalle">
     <div id="detalleContainer">
@@ -92,9 +103,9 @@
         <table class="table" id="carritoTable">
           <thead>
             <tr>
-              <td>Item</td>
-              <td>Producto</td>
-              <td>Eliminar</td>
+              <td class="columnas">Orden</td>
+              <td class="columnas">Producto</td>
+              <td class="columnas">Eliminar</td>
             </tr>
           </thead>
           <tbody id="items">
@@ -119,44 +130,32 @@
 
   </section>
 
-
   <section id="modalFormulario" class="modalFormulario">
-
     <form id="contact-form">
-
-
       <input type="hidden" name="contact_number">
-
       <div id="nameForm" class="formParts">
-        <label>Name</label>
-        <input type="text" name="from_name" id="nombreForm" placeholder="Ingresa tu nombre" required>
+        <label class="labels">Name</label>
+        <input class="formImputs" type="text" name="from_name" id="nombreForm" placeholder="Ingresa tu nombre" required>
       </div>
       <div id="emailForm" class="formParts">
-
-
-        <label>Email</label>
-        <input type="email" name="user_email" id="mailForm" placeholder="Ingresa tu e-mail" required>
-
+        <label class="labels">Email</label>
+        <input class="formImputs" type="email" name="user_email" id="mailForm" placeholder="Ingresa tu e-mail" required>
       </div>
-
+      <div id="cellForm" class="formParts">
+        <label class="labels">Celular</label>
+        <input class="formImputs" type="text" name="user_celular" id="celularForm" placeholder="Ingresa tu e-celular"
+          required>
+      </div>
       <div id="messageForm" class="formParts">
-        <label>Message</label>
+        <label class="labels">Message</label>
         <textarea name="message" id="textoForm"></textarea>
       </div>
-      <div id="submitForm"  class="formParts">
-
-
-        <input type="submit" value="Enviar" onclick="enviarFormulario()">
-        <input type="button" onclick="cerrarFormulario()" value="Cerrar Formulario">
+      <div id="submitForm" class="formParts">
+        <input class="formBtn" type="button" onclick="cerrarFormulario()" value="Cerrar Formulario">
+        <input class="formBtn" type="submit" value="Enviar" onclick="enviarFormulario()">
       </div>
-
-
-
     </form>
-
   </section>
-
-
 
   <!-- NOSOTROS -->
 
@@ -168,6 +167,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
+  <!-- CONTACTOS -->
   <section class="newsletter container " id="sectionContacto">
     <h3>CONTACTO</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
@@ -176,6 +176,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
+  <!-- COMPRAR -->
   <section class="newsletter container" id="sectionComprar">
     <h3>¿Como Comprar?</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
@@ -184,6 +185,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
+  <!-- ENVIOS -->
   <section class="newsletter container" id="sectionEnvios">
     <h3>Envios</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
@@ -192,11 +194,7 @@
       debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
   </section>
 
-
-
-
-  <!-- Newsletter -->
-
+  <!-- NEWSLETTER -->
   <section class="newsletter" id="sectionNewsletter">
     <h3>Enterate de las novedades</h3>
     <p>Suscribite al newsletter y no te pierdas los nuevos ingresos</p>
@@ -206,18 +204,11 @@
     </form>
   </section>
 
+  <!-- LINK VOLVER -->
   <a href="#header" id="arrowUpAnchor">
     <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
   </a>
-
-
-
-
-
-
-
-
-
+  <!-- LINK WHATSAPP -->
   <a href="" class="button__container--absolute">
     <div class="button__whatsapp">
       <p href="" class="msg">click aqui para hablar con nosotros</p>
@@ -226,6 +217,22 @@
       </p>
     </div>
   </a>
+
+  <footer id="footer">
+    <div id="redesLink">
+      <div>
+        <img class="redesImg" src="./images/instagram_logo.png" alt="facebook Logo">
+        <a href="https://www.instagram.com/lugashop_indumentaria/">Instagram</a>
+      </div>
+      <div>
+        <img class="redesImg"src="./images/facebook_logo.png" alt="Instagram Logo">
+        <a href="https://www.facebook.com/profile.php?id=100074869466982">Facebook</a>
+      </div>
+    </div>
+
+
+
+  </footer>
 
   <!-- TEMPLATES -->
   <template id="template">
@@ -274,6 +281,7 @@
 
   </template>
   <!-- TEMPLATES END -->
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="./categoria.js"></script>
 </body>
