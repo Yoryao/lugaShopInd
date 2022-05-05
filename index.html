@@ -195,15 +195,32 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter" id="sectionNewsletter">
+  <!-- <section class="newsletter" id="sectionNewsletter">
     <h3>Enterate de las novedades</h3>
     <p>Suscribite al newsletter y no te pierdas los nuevos ingresos</p>
     <form action="">
       <input type="email" placeholder="Ingresa tu correo" />
       <button type="submit">Suscribirse</button>
     </form>
+  </section> -->
+
+
+  <section class="newsletter" id="sectionNewsletter">
+    <h3>Enterate de las novedades</h3>
+    <p>Suscribite al newsletter y no te pierdas los nuevos ingresos.</p>
+    <form id="newsletter-form">
+      <input type="email" placeholder="Ingresa tu correo" name="from_mail" required />
+      <button type="submit" onclick="addNewsletter()">Suscribirse</button>
+    </form>
   </section>
 
+   
+  
+  
+  
+  
+  
+  
   <!-- LINK VOLVER -->
   <a href="#header" id="arrowUpAnchor">
     <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
@@ -222,11 +239,11 @@
     <div id="redesLink">
       <div>
         <img class="redesImg" src="./images/instagram_logo.png" alt="facebook Logo">
-        <a href="https://www.instagram.com/lugashop_indumentaria/">Instagram</a>
+        <a href="https://www.instagram.com/lugashop_indumentaria/" target="_blank">Instagram</a>
       </div>
       <div>
         <img class="redesImg"src="./images/facebook_logo.png" alt="Instagram Logo">
-        <a href="https://www.facebook.com/profile.php?id=100074869466982">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=100074869466982" target="_blank">Facebook</a>
       </div>
     </div>
 
