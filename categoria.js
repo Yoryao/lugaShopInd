@@ -7,6 +7,11 @@ console.log("Productos Funcionando.");
   emailjs.init("iMFHtbtT-GUb9TxOF");
 })();
 
+(function () {
+  // https://dashboard.emailjs.com/admin/integration
+  emailjs.init("iMFHtbtT-GUb9TxOF");
+})();
+
 //0)DECLARO VARIABLES A UTILIZAR
 let carrito = [
   {
@@ -315,6 +320,37 @@ function enviarFormulario() {
           vaciarCarrito();
           cerrarCarrito();
           cerrarFormulario();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+}
+
+function addNewsletter() {
+  document
+    .getElementById("newsletter-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log("Se envio Correo");
+      // these IDs from the previous steps
+      emailjs.sendForm("contact_service", "add_newsletter", this).then(
+        function () {
+          Toastify({
+            text: "{Te suscribiste al newsletter.}.",
+            duration: 1500,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "pink",
+              borderRadius: "5px",
+              color: "black",
+            },
+          }).showToast();
+
+
         },
         function (error) {
           console.log("FAILED...", error);

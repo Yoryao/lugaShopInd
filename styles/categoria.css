@@ -10,6 +10,17 @@
   flex-wrap: wrap;
 }
 
+#sectionNewsletter{
+  border: 2px black dotted;
+}
+
+#newsletter-form {
+ 
+ 
+  background-color: transparent;
+}
+
+
 .section {
   height: 150px;
   width: 22%;
