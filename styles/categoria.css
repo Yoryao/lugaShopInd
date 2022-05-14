@@ -1,5 +1,53 @@
 * {
-  background-color: rgb(238, 175, 233);
+  background-color: transparent;
+}
+/* HEADER */
+#header {
+  display: flex;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 100000;
+}
+
+a {
+  text-decoration: purple;
+  color: red;
+}
+
+.hero {
+  margin-top: 3%;
+}
+
+.hero-img {
+  display: inline-block;
+  width: 100%;
+}
+
+.marca {
+  display: flex;
+  position: absolute;
+  height: 400px;
+  width: 50%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1000;
+}
+
+#mainTitle {
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 400px;
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding-top: 120px;
 }
 
 #categoriasContainer {
@@ -10,16 +58,13 @@
   flex-wrap: wrap;
 }
 
-#sectionNewsletter{
+#sectionNewsletter {
   border: 2px black dotted;
 }
 
 #newsletter-form {
- 
- 
   background-color: transparent;
 }
-
 
 .section {
   height: 150px;
@@ -69,17 +114,12 @@
 
 .productosTitulo {
   font-size: 1.3rem;
-
-
 }
 
 .productosDescripcion {
-  font-size: .9rem;
+  font-size: 0.9rem;
   display: none;
-
-
 }
-
 
 .section__image__button {
   background: url(../images/eclipseSmall.gif);
@@ -114,7 +154,6 @@
   height: 100vh;
   width: 100vw;
   background-color: rgba(26, 27, 21, 0.7);
-  
 }
 
 .mostrarCarrito,
@@ -140,7 +179,6 @@
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 35px;
-  
 }
 
 .detalleSection {
@@ -155,7 +193,7 @@
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  align-self: center  ;
+  align-self: center;
 }
 
 .detalleImagen {
@@ -198,8 +236,6 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
-
-
 
 p {
   color: rgba(26, 27, 21, 0.7) !important;
@@ -263,40 +299,31 @@ p {
 }
 #carritoTable {
   width: 100% !important;
-
-
 }
 
-
-
-#items{
+#items {
   text-align: center;
-  }
+}
 
+#carritoContainer {
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
-  
-  #carritoContainer {
-    height: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+.borrarBtn {
+  display: inline-flex;
+  margin-left: -10px;
+  background-color: red;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
 
-  .borrarBtn {
-    display: inline-flex;
-    margin-left: -10px;
-    background-color: red;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    
-    justify-content: center;
-    align-items: center;
-  }
-
-
+  justify-content: center;
+  align-items: center;
+}
 
 #contact-form {
-
   height: 70%;
   margin: 30px auto;
   width: 70%;
@@ -309,16 +336,14 @@ p {
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 35px;
-  
 }
 
-.formParts  {
+.formParts {
   width: 80%;
   padding: 10px;
-   display: flex;
+  display: flex;
   flex-direction: row;
   border: 1px solid black;
- 
 }
 
 .labels {
@@ -357,7 +382,7 @@ p {
   bottom: 0;
   background-color: chartreuse;
   flex-direction: row;
-  justify-content:center;
+  justify-content: center;
 }
 
 #redesLink {
@@ -365,7 +390,6 @@ p {
   width: 30%;
   justify-content: space-between;
   background-color: none;
-
 }
 .redesImg {
   height: 30px;
