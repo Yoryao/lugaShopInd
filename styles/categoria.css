@@ -14,7 +14,7 @@
 
 a {
   text-decoration: purple;
-  color: red;
+
 }
 
 .hero {
@@ -59,11 +59,32 @@ a {
 }
 
 #sectionNewsletter {
-  border: 2px black dotted;
+
+  background-color: rgb(248, 179, 191);
+}
+
+#sectionNewsletter input {
+  border: 1px solid black;
 }
 
 #newsletter-form {
   background-color: transparent;
+}
+
+#imagenContacto {
+position: absolute;
+margin-left: 0;
+height: 100%;
+width: auto;
+object-fit: cover;
+opacity: .5;
+
+}
+
+#contactoContainer {
+  width: 100%;
+  display: block;
+  border: 1px solid black;
 }
 
 .section {
@@ -380,9 +401,14 @@ p {
   position: fixed;
   left: 0;
   bottom: 0;
-  background-color: chartreuse;
+  background-color: rgb(248, 179, 191);
   flex-direction: row;
   justify-content: center;
+}
+
+#footer a {
+  text-decoration: none;
+  
 }
 
 #redesLink {
