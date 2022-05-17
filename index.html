@@ -23,7 +23,7 @@
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src="images/logo.JPG" alt="LUGA" />
+          <img src="images/logo2.jpg" alt="LUGA" />
         </a>
       </div>
       <div class="menu">
@@ -47,9 +47,15 @@
 
   <!-- IMAGEN PRINCIPAL -->
   <section class="hero">
+    <div class="marca">
+  </div>
+  <p id="mainTitle">LUGA SHOP</p>
+
+
     <img class="hero-img"
-      src="https://images.unsplash.com/photo-1562740672-22db5c969f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
-      alt="hero" />
+      src="images/BBA6E6B1-5DA0-40AB-8EC2-31CDA880FE18 1.png"
+      alt="hero" 
+      />
   </section>
   <!-- FINAL IMAGEN PRINCIPAL -->
 
@@ -151,7 +157,7 @@
         <textarea name="message" id="textoForm"></textarea>
       </div>
       <div id="submitForm" class="formParts">
-        <input class="formBtn" type="button" onclick="cerrarFormulario()" value="Cerrar Formulario">
+        <input class="formBtn" type="button" onclick="cerrarFormulario()" value="Cerrar">
         <input class="formBtn" type="submit" value="Enviar" onclick="enviarFormulario()">
       </div>
     </form>
@@ -169,11 +175,28 @@
 
   <!-- CONTACTOS -->
   <section class="newsletter container " id="sectionContacto">
-    <h3>CONTACTO</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
-      architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
-      nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam
-      debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+ <div id="contactoContainer">
+    <img src="./images/BBA6E6B1-5DA0-40AB-8EC2-31CDA880FE18 1.png" alt="clothes image" id="imagenContacto">
+  
+    <h2>Contactos</h2>
+    <br>
+    <h5>Nuestras Redes</h>
+      <div>
+        <img class="redesImg" src="./images/instagram_logo.png" alt="facebook Logo">
+        <a href="https://www.instagram.com/lugashop_indumentaria/" target="_blank">Instagram</a>
+      </div>
+      <div>
+        <img class="redesImg"src="./images/facebook_logo.png" alt="Instagram Logo">
+        <a href="https://www.facebook.com/profile.php?id=100074869466982" target="_blank">Facebook</a>
+      </div>
+      <br>
+      <h5>Hablanos por whatsapp!</h>
+        <br>
+        <h5>+54 9 3777 62-9496</h>
+        </div>
+
+
+
   </section>
 
   <!-- COMPRAR -->
@@ -187,11 +210,12 @@
 
   <!-- ENVIOS -->
   <section class="newsletter container" id="sectionEnvios">
-    <h3>Envios</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vero repellat expedita optio accusamus
-      architecto? Iusto tempore perferendis suscipit possimus modi, culpa fugit error sequi, velit praesentium incidunt
-      nemo deserunt omnis commodi aliquam voluptate ea odio adipisci optio id. Quod alias maiores, eum maxime ullam
-      debitis tempora dolorum fugiat nihil. Dolorem inventore neque itaque esse ut odit.</p>
+    <h2>Envíos</h2>
+    <br>
+    <h5>Retira tu pedido en nuestra sucursal!</h>
+    <p>Pago Largo y Saladas, Goya, Corrientes, W3450</p>
+    <h5>Envios a domicilio</h5>
+    <p>Lo llevamos hasta la puerta de tu casa!</p>
   </section>
 
   <!-- NEWSLETTER -->
@@ -207,9 +231,9 @@
 
   <section class="newsletter" id="sectionNewsletter">
     <h3>Enterate de las novedades</h3>
-    <p>Suscribite al newsletter y no te pierdas los nuevos ingresos.</p>
+    <h5>Suscribite al newsletter y no te pierdas los nuevos ingresos.</h5>
     <form id="newsletter-form">
-      <input type="email" placeholder="Ingresa tu correo" name="from_mail" required />
+      <input type="email" placeholder="Direccion de Correo" name="from_mail" required />
       <button type="submit" onclick="addNewsletter()">Suscribirse</button>
     </form>
   </section>
@@ -222,13 +246,13 @@
   
   
   <!-- LINK VOLVER -->
-  <a href="#header" id="arrowUpAnchor">
+  <a href="#mainTitle" id="arrowUpAnchor">
     <img id="arrowUp" src="./images/arrowUp.png" alt="arrowUp"></img>
   </a>
   <!-- LINK WHATSAPP -->
-  <a href="" class="button__container--absolute">
+  <a href="https://api.whatsapp.com/message/MSBYVYVNUYJEL1?autoload=1&app_absent=0" target="_blank" class="button__container--absolute">
     <div class="button__whatsapp">
-      <p href="" class="msg">click aqui para hablar con nosotros</p>
+      <p href="https://api.whatsapp.com/message/MSBYVYVNUYJEL1?autoload=1&app_absent=0" class="msg">click aqui para hablar con nosotros</p>
       <p>
         <img src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png" alt="" />
       </p>
@@ -277,12 +301,7 @@
       <p id="detalleDescripcion" class="detalleDescripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Laborum qui, fuga beatae
         atque quas odit.</p>
-      <div>
-        <span class="talles"> S </span>
-        <span class="talles"> M </span>
-        <span class="talles"> L </span>
-        <span class="talles"> XL </span>
-      </div>
+        <p id="detallePrice" class="detallePrice">Lorem </p>
 
 
       <div class="detalleBtn">

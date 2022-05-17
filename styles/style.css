@@ -73,7 +73,8 @@ header .container {
 }
 
 .menu ul li a {
-  color: #333;
+  color: purple;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -91,9 +92,9 @@ header .container {
 .hero .hero-img {
   width: 100%;
   display: block;
-  height: auto;
-  max-height: 800px;
-  object-fit: cover;
+   height: auto;
+  max-height: 400px;
+  object-fit: fill;
 }
 
 /* Newsletter */
