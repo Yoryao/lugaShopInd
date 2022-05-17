@@ -14,24 +14,7 @@ console.log("Productos Funcionando.");
 
 //0)DECLARO VARIABLES A UTILIZAR
 let carrito = [
-  {
-    posicion: 1,
-    nombre: "Remera",
-    id: 545,
-  },
-  {
-    posicion:2,
-    nombre: "Pollera",
-    id: 570,
-  },
-  {
-    posicion: 3,
-    nombre: "Pantalon",
-    id: 565,
-  }
-
-
-
+ 
 ];
 
 //1) llamo a las categorias.
@@ -127,6 +110,7 @@ const mostrarProductos = async (data) => {
   
     clone.getElementById("productosTitle").textContent = item.title;
     clone.getElementById("productosInfo").textContent = item.description;
+    
     clone.getElementById("addButton").addEventListener("click", function () {
       verDetalle(item);
     });
@@ -159,6 +143,8 @@ const verDetalle = async (item) => {
   clone.getElementById("detalleImagen").setAttribute("src", item.images[0]);
   clone.getElementById("detalleNombre").textContent = item.title;
   clone.getElementById("detalleDescripcion").textContent = item.description;
+  clone.getElementById("detallePrice").textContent = item.price;
+  
 
   fragment.appendChild(clone);
 
