@@ -84,19 +84,6 @@ header .container {
 
 /* Hero */
 
-.hero {
-  text-align: center;
-  width: 100%;
-}
-
-.hero .hero-img {
-  width: 100%;
-  display: block;
-   height: auto;
-  max-height: 400px;
-  object-fit: fill;
-}
-
 /* Newsletter */
 
 .newsletter {

@@ -4,62 +4,56 @@
 /* HEADER */
 #header {
   display: flex;
-  position: fixed !important;
+  position: sticky !important;
   top: 0;
   left: 0;
   width: 100%;
-  height: 10%;
-  z-index: 100000;
+  height: 100px;
+  z-index: 10000;
 }
 
 a {
   text-decoration: purple;
-
 }
 
 .hero {
-  margin-top: 3%;
+  position: relative;
 }
 
-.hero-img {
-  display: inline-block;
+.hero .hero-img {
   width: 100%;
+  height: 100%;
+  display: block;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
 }
 
 .marca {
   display: flex;
   position: absolute;
-  height: 400px;
+  height: 100%;
   width: 50%;
-  background-color: black;
+  background-color: #111;
   opacity: 0.3;
   z-index: 1000;
 }
 
 #mainTitle {
-  display: block;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 50%;
-  height: 400px;
-  font-size: 80px;
-  font-weight: bolder;
+  color: #f2d5c6;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  padding-top: 120px;
-}
-
-#categoriasContainer {
-  border-radius: 1px solid red;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  z-index: 1000;
 }
 
 #sectionNewsletter {
-
   background-color: rgb(248, 179, 191);
 }
 
@@ -72,92 +66,120 @@ a {
 }
 
 #imagenContacto {
-position: absolute;
-height: 40vh;
-width: 100%;
-left: 0;
-object-fit: cover;
-opacity: .4 ;
-
+  position: absolute;
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 #contactoContainer {
   margin-top: 70px;
-
   width: 100%;
-  height: 40vh;
-  display: block;
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-image: url('../images/BBA6E6B1-5DA0-40AB-8EC2-31CDA880FE18 1.png');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+  backdrop-filter: contrast(40%);
+}
+
+.redes {
+  display: flex;
 }
 
 #sectionContacto {
   width: 100%;
-  margin-top: 70px;
   margin-left: 0;
   margin-right: 0;
   max-width: 100%;
+}
 
- 
+/* Categorias ------------------ */
+
+#categoriasContainer {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .section {
-  height: 150px;
-  width: 22%;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  border: 1px solid black;
+  max-width: 250px;
+}
+
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+}
+
+.categoryP {
+  height: 40px;
+  font-size: 13px;
   text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#loadProductosBtn {
+  border: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 30px;
 }
 
 #productosContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  place-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 #sectionProductos {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .productosSection {
   display: flex;
   flex-direction: column;
-  align-content: space-around;
-  justify-content: space-between;
-  margin: 1%;
-  padding: 2%;
-  flex-wrap: wrap;
-  height: 250px;
-  width: 18%;
-  text-align: center;
-  border: solid 1px black;
-  border-radius: 5px;
+  max-width: 250px;
+  margin: auto;
 }
 
 .productos__Image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   align-self: center;
-  background-position: center;
-  background-size: 120px 120px;
-  border-radius: 10%;
 }
 
 .productosTitulo {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .productosDescripcion {
   font-size: 0.9rem;
-  display: none;
+  text-align: center;
 }
 
-#sectionNosotros, #sectionContacto, #sectionComprar{
+#sectionNosotros,
+#sectionContacto,
+#sectionComprar {
   padding-top: 90px;
-
 }
 
 .section__image__button {
@@ -323,14 +345,6 @@ p {
   padding: 15px 0 35px 0;
 }
 
-#loadProductosBtn {
-  width: 25%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  border-radius: 5px;
-  padding: 5px 10px 5px 10px;
-}
-
 #sectionCategorias {
   display: flex;
   flex-direction: column;
@@ -426,7 +440,6 @@ p {
 
 #footer a {
   text-decoration: none;
-  
 }
 
 #redesLink {
