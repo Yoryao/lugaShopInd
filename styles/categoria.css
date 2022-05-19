@@ -13,7 +13,8 @@
 }
 
 a {
-  text-decoration: purple;
+  text-decoration: none;
+  color: #333;
 }
 
 .hero {
@@ -54,15 +55,27 @@ a {
 }
 
 #sectionNewsletter {
-  background-color: rgb(248, 179, 191);
+  background-color: #f2d5c6;
 }
 
 #sectionNewsletter input {
   border: 1px solid black;
 }
 
-#newsletter-form {
-  background-color: transparent;
+#newsletter-form input {
+  background-color: rgba(36, 36, 36, 0.142);
+  border: none;
+}
+
+#newsletter-form input::placeholder {
+  color: #333;
+}
+
+#newsletter-form button {
+  background-color: #333;
+  color: #f2d5c6;
+  border: none;
+  cursor: pointer;
 }
 
 #imagenContacto {
@@ -80,11 +93,23 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background-image: url('../images/BBA6E6B1-5DA0-40AB-8EC2-31CDA880FE18 1.png');
-  background-size: cover;
-  background-position: center;
   padding: 3rem 0;
-  backdrop-filter: contrast(40%);
+  position: relative;
+}
+
+#contactoContainer * {
+  z-index: 10;
+}
+
+.contacto-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: opacity(0.6);
 }
 
 .redes {
@@ -124,7 +149,9 @@ a {
 }
 
 .categoryP {
-  height: 40px;
+  display: flex;
+  align-items: center;
+  min-height: 55px;
   font-size: 13px;
   text-align: center;
   font-weight: bold;
@@ -227,7 +254,7 @@ a {
 #detalleContainer,
 #contact-form,
 #carritoContainer {
-  background-color: aquamarine;
+  background-color: #fff;
   height: 75%;
   margin: 120px auto;
   width: 70%;
@@ -236,10 +263,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 35px;
+  border-radius: 12px;
 }
 
 .detalleSection {
@@ -258,31 +282,38 @@ a {
 }
 
 .detalleImagen {
-  height: 60%;
-  width: auto;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
   align-self: center;
-  border-radius: 15px;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
 .detalleDescripcion {
-  width: 80%;
   text-align: center;
+}
+
+#detallePrice {
+  font-weight: 600;
 }
 
 .detalleBtn {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin: 10px 0;
   justify-content: space-evenly;
 }
 
 .detalleBtn button {
-  width: 40%;
-  padding: 5px 40px;
-  background-color: blueviolet;
+  background-color: #333;
+  color: #f2d5c6;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: none;
   border-radius: 5px;
+  font-weight: 600;
 }
 .botonCarrito {
   width: 30%;
@@ -430,10 +461,10 @@ p {
   padding: 5px;
   margin-left: 0;
   display: flex;
-  position: fixed;
+
   left: 0;
   bottom: 0;
-  background-color: rgb(248, 179, 191);
+  background-color: #f2d5c6;
   flex-direction: row;
   justify-content: center;
 }
